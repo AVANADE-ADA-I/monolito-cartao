@@ -12,8 +12,8 @@ import tech.ada.bootcamp.arquitetura.cartaoservice.serviceManager.PegarFatura;
 public class VerFaturaController {
     private PegarFatura pegarFatura;
 
-    public VerFaturaController (PegarFatura pegarFaturaPresenter) {
-        this.pegarFatura = pegarFaturaPresenter;
+    public VerFaturaController (PegarFatura pegarFatura) {
+        this.pegarFatura = pegarFatura;
     }
     @GetMapping(path = "/{numeroCartao}/{mes}/{ano}", produces = "application/json" )
     public FaturaResponse PegarFatura(@PathVariable("numeroCartao") String numeroCartao

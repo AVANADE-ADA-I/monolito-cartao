@@ -13,8 +13,8 @@ import tech.ada.bootcamp.arquitetura.cartaoservice.serviceManager.CriarCompra;
 public class RealizarCompraController {
 
     private CriarCompra compra;
-    public RealizarCompraController(CriarCompra compraPresenter) {
-        this.compra = compraPresenter;
+    public RealizarCompraController(CriarCompra compra) {
+        this.compra = compra;
     }
 
     @PostMapping(path = "", produces = "application/json" )

@@ -13,8 +13,8 @@ import tech.ada.bootcamp.arquitetura.cartaoservice.serviceManager.CriarCartao;
 @Slf4j
 public class UsuarioController {
     private CriarCartao cartao;
-    public UsuarioController (CriarCartao cartaoPresenter) {
-        this.cartao = cartaoPresenter;
+    public UsuarioController (CriarCartao cartao) {
+        this.cartao = cartao;
     }
     @PostMapping(path = "", produces = "application/json" )
     public CadastroUsuarioResponse cadastrarUsuario(@RequestBody @Valid CadastroPrincipalRequest dto){

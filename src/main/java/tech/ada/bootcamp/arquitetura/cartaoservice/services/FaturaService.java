@@ -54,7 +54,6 @@ public class FaturaService {
         return new FaturaResponse(novaFatura,compras);
     }
 
-
     private BigDecimal balancoFaturaAnterior(Cartao cartao, LocalDate dataVencimento) {
         LocalDate dataVencimentoAnterior = dataVencimento.minusMonths(1);
         var faturaAnterior = faturaRepository.findByDataVencimentoAndCartao(dataVencimentoAnterior, cartao);
